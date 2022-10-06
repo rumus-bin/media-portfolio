@@ -8,7 +8,7 @@ use RumusBin\AttributesRouter\RoteAttributes\Get;
 
 class HomeController extends Controller
 {
-    #[Get('/qwe', name: 'index', middleware: ['web'])]
+    #[Get('/', name: 'index', middleware: ['web'])]
     public function index(Request $request)
     {
         return view('welcome');
