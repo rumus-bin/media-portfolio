@@ -29,9 +29,9 @@ use Inertia\Inertia;
 //});
 
 
-Route::get('/dashboard', function () {
-    $user = \Illuminate\Support\Facades\Auth::user();
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+//Route::get('/dashboard', function () {
+//    $user = \Illuminate\Support\Facades\Auth::user();
+//    return Inertia::render('Dashboard');
+//})->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
