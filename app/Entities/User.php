@@ -2,12 +2,17 @@
 
 namespace App\Entities;
 
+use App\Entities\Authorization\Role;
 use App\Entities\Blog\Post;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\Id;
+use Doctrine\ORM\Mapping\InverseJoinColumn;
+use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\ORM\Mapping\JoinTable;
+use Doctrine\ORM\Mapping\ManyToMany;
 use Doctrine\ORM\Mapping\OneToMany;
 use Doctrine\ORM\Mapping\Table;
 use Illuminate\Contracts\Auth\Authenticatable;
@@ -24,6 +29,7 @@ class User implements Authenticatable, \JsonSerializable, Arrayable
     public const ID = 'id';
     public const NAME = 'name';
     public const EMAIL = 'email';
+    public const ROLES_RELATIONS = 'roles';
 
     public function __construct(
         string $name,
@@ -38,10 +44,10 @@ class User implements Authenticatable, \JsonSerializable, Arrayable
     #[Id, Column(type: 'integer'), GeneratedValue()]
     protected int $id;
 
-   #[Column(type: 'string')]
+    #[Column(type: 'string')]
     protected string $name;
 
-   #[Column(type: 'string')]
+    #[Column(type: 'string')]
     protected string $email;
 
     #[Column(type: 'datetime')]
@@ -64,6 +70,12 @@ class User implements Authenticatable, \JsonSerializable, Arrayable
      * @var Collection<Post> $posts
      */
     protected Collection $posts;
+
+    #[ManyToMany(targetEntity: Role::class, inversedBy: Role::USERS_RELATIONS)]
+    #[JoinTable(name: 'role_user')]
+    #[JoinColumn(name: 'user_id', referencedColumnName: self::ID)]
+    #[InverseJoinColumn(name: 'role_id', referencedColumnName: self::ID)]
+    protected Collection $roles;
 
     /**
      * @return int
@@ -195,7 +207,7 @@ class User implements Authenticatable, \JsonSerializable, Arrayable
 
     public function addPost(Post $post): self
     {
-        if (! $this->posts->contains($post)) {
+        if (!$this->posts->contains($post)) {
             $post->setAuthor($this);
             $this->posts->add($post);
         }
