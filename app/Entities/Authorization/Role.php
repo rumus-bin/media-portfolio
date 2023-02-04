@@ -27,7 +27,7 @@ class Role extends PersistUpdateTimestamps implements EntityInterface
     #[Column(type: 'integer')]
     protected int $id;
 
-    #[Column(name: 'role_name', type: 'string', length: 255)]
+    #[Column(name: self::ROLE_NAME, type: 'string', length: 255)]
     protected string $roleName;
 
     #[OneToMany(mappedBy: 'role', targetEntity: ResourcePermission::class, fetch: 'EAGER', orphanRemoval: true)]
