@@ -15,23 +15,8 @@ use Inertia\Inertia;
 |
 */
 
-//Route::get('/', function () {
-//    return Inertia::render('Welcome', [
-//        'canLogin' => Route::has('login'),
-//        'canRegister' => Route::has('register'),
-//        'laravelVersion' => Application::VERSION,
-//        'phpVersion' => PHP_VERSION,
-//    ]);
-//});
-
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
-
-//Route::get('/dashboard', function () {
-//    $user = \Illuminate\Support\Facades\Auth::user();
-//    return Inertia::render('Dashboard');
-//})->middleware(['auth', 'verified'])->name('dashboard');
+/**
+ * Use RumusBin\AttributesRouter for mapping routes
+ */
 
 require __DIR__.'/auth.php';

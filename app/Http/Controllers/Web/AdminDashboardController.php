@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use RumusBin\AttributesRouter\RoteAttributes\Get;
-use RumusBin\AttributesRouter\RoteAttributes\Middleware;
 
 class AdminDashboardController extends Controller
 {
