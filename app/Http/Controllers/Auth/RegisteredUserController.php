@@ -19,6 +19,7 @@ class RegisteredUserController extends Controller
         protected UserRepository $userRepository
     ) {
     }
+
     /**
      * Display the registration view.
      *
@@ -32,7 +33,7 @@ class RegisteredUserController extends Controller
     /**
      * Handle an incoming registration request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse
      *
      * @throws \Illuminate\Validation\ValidationException

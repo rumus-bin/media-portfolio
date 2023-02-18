@@ -12,7 +12,6 @@ class AdminDashboardController extends Controller
     #[Get('/dashboard', name: 'dashboard', middleware: ['auth', 'verified'])]
     public function adminDashboard(Request $request)
     {
-
 //        return Inertia::render('Dashboard');
         return response()->json(['admin-dash']);
     }
