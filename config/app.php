@@ -193,10 +193,12 @@ return [
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
+        
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        AdminDashboard\AdminDashboardRouteServiceProvider::class
+        AdminDashboard\AdminDashboardRouteServiceProvider::class,
+        AdminDashboard\AdminDashboardServiceProvider::class
 
     ],
 
