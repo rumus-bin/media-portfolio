@@ -1,9 +1,5 @@
 <?php
 
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,4 +15,4 @@ use Inertia\Inertia;
  * Use RumusBin\AttributesRouter for mapping routes
  */
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
