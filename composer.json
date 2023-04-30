@@ -12,6 +12,7 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^2.8",
         "laravel/tinker": "^2.7",
+        "lexo/defer-vite": "^1.0",
         "rumus-bin/laravel-routes-attributes": "dev-main",
         "tightenco/ziggy": "^1.0"
     },

@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     @vite('resources/css/app.css')
+
+
+
+    {{--    @vite('resources/libs/gsap/gsap.min.js')--}}
+    {{--    @vite('resources/libs/gsap/ScrollSmoother.min.js')--}}
+    {{--    @vite('resources/libs/gsap/ScrollTrigger.min.js')--}}
+
 </head>
 <body class="antialiased">
 {{--    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">--}}
@@ -26,5 +36,9 @@
 
 <div id="home"></div>
 @vite('resources/js/app.js')
+<script src="/libs/gsap/gsap.min.js" defer></script>
+<script src="/libs/gsap/ScrollSmoother.min.js" defer></script>
+<script src="/libs/gsap/ScrollTrigger.min.js" defer></script>
+<script src="/js/app.js" defer></script>
 </body>
 </html>
