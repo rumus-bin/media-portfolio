@@ -1,23 +1,26 @@
 <template>
   <header-stats/>
   <div class="px-4 md:px-10 mx-auto w-full -m-24">
+    <div>
+      <div class="flex flex-wrap">
+        <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
+          <card-line-chart/>
+        </div>
+        <div class="w-full xl:w-4/12 px-4">
+          <card-bar-chart/>
+        </div>
+      </div>
+      <div class="flex flex-wrap mt-4">
+        <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
+          <card-page-visits/>
+        </div>
+        <div class="w-full xl:w-4/12 px-4">
+          <card-social-traffic/>
+        </div>
+      </div>
+    </div>
 
-    <div class="flex flex-wrap">
-      <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
-        <card-line-chart/>
-      </div>
-      <div class="w-full xl:w-4/12 px-4">
-        <card-bar-chart/>
-      </div>
-    </div>
-    <div class="flex flex-wrap mt-4">
-      <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
-        <card-page-visits/>
-      </div>
-      <div class="w-full xl:w-4/12 px-4">
-        <card-social-traffic/>
-      </div>
-    </div>
+    <footer-admin/>
   </div>
 </template>
 <script>
@@ -26,10 +29,12 @@ import CardBarChart from "@/Components/AdminDashboard/Cards/CardBarChart.vue";
 import CardPageVisits from "@/Components/AdminDashboard/Cards/CardPageVisits.vue";
 import CardSocialTraffic from "@/Components/AdminDashboard/Cards/CardSocialTraffic.vue";
 import HeaderStats from "@/Components/AdminDashboard/Headers/HeaderStats.vue";
+import FooterAdmin from "@/Components/AdminDashboard/Footers/FooterAdmin.vue";
 
 export default {
   name: "dashboard-page",
   components: {
+    FooterAdmin,
     HeaderStats,
     CardLineChart,
     CardBarChart,

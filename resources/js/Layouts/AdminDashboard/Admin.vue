@@ -8,9 +8,9 @@
       <router-view/>
       <!--        <footer-admin/>-->
       <!--      </div>-->
-      <div class="px-4 md:px-10 mx-auto w-full -m-24">
-        <footer-admin/>
-      </div>
+      <!--      <div class="px-4 md:px-10 mx-auto w-full -m-24">-->
+      <!--        <footer-admin/>-->
+      <!--      </div>-->
     </div>
   </div>
 </template>
