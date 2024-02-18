@@ -3,9 +3,12 @@
     <sidebar/>
     <div class="relative md:ml-64 bg-blueGray-100">
       <admin-navbar/>
-      <header-stats/>
+      <!--      <header-stats/>-->
+      <!--      <div class="px-4 md:px-10 mx-auto w-full -m-24">-->
+      <router-view/>
+      <!--        <footer-admin/>-->
+      <!--      </div>-->
       <div class="px-4 md:px-10 mx-auto w-full -m-24">
-        <router-view/>
         <footer-admin/>
       </div>
     </div>
@@ -14,7 +17,7 @@
 <script>
 import AdminNavbar from "@/Components/AdminDashboard/Navbars/AdminNavbar.vue";
 import Sidebar from "@/Components/AdminDashboard/Sidebar/Sidebar.vue";
-import HeaderStats from "@/Components/AdminDashboard/Headers/HeaderStats.vue";
+// import HeaderStats from "@/Components/AdminDashboard/Headers/HeaderStats.vue";
 import FooterAdmin from "@/Components/AdminDashboard/Footers/FooterAdmin.vue";
 
 export default {
@@ -22,7 +25,7 @@ export default {
   components: {
     AdminNavbar,
     Sidebar,
-    HeaderStats,
+    // HeaderStats,
     FooterAdmin,
   },
 };

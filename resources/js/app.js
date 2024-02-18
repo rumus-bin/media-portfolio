@@ -1,5 +1,6 @@
 import './bootstrap';
 import '../css/app.css';
+import '../css/tailwind.css';
 
 import {createApp} from 'vue';
 import App from './Components/App.vue';
@@ -16,6 +17,7 @@ import Auth from "./Layouts/AdminDashboard/Auth.vue";
 // views for Admin layout
 import Dashboard from "@/Views/admin/Dashboard.vue";
 import Settings from "@/Views/admin/Settings.vue";
+import Pages from "@/Views/admin/Pages.vue";
 import Tables from "@/Views/admin/Tables.vue";
 import Maps from "@/Views/admin/Maps.vue";
 
@@ -44,6 +46,10 @@ const routes = [
             {
                 path: "/admin/settings",
                 component: Settings,
+            },
+            {
+                path: "/admin/pages",
+                component: Pages,
             },
             {
                 path: "/admin/tables",
