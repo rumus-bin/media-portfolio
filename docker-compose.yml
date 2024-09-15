@@ -7,6 +7,7 @@ services:
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP:-1000}'
+                NODE_VERSION: 18
         image: sail-8.1/app
         container_name: portfolio_app_container
         extra_hosts:
