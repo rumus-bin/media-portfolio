@@ -198,7 +198,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         AdminDashboard\AdminDashboardRouteServiceProvider::class,
-        AdminDashboard\AdminDashboardServiceProvider::class
+        AdminDashboard\AdminDashboardServiceProvider::class,
 
     ],
 
