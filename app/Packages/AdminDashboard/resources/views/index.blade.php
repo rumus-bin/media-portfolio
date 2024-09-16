@@ -36,7 +36,7 @@
 <body class="text-blueGray-700 antialiased">
 <noscript>
     <strong
-    >We're sorry but vue-notus doesn't work properly without JavaScript
+    >We're sorry but our project doesn't work properly without JavaScript
         enabled. Please enable it to continue.</strong
     >
 </noscript>
